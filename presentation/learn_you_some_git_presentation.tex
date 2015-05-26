@@ -31,8 +31,6 @@
 }
 \date{\today}
 
-\subject{Computer Science}
-
 \begin{document}
 
 \frame{\titlepage}
@@ -42,41 +40,45 @@
 \tableofcontents[currentsection]
 \end{frame}
 
+\section{Create Repositories}
 \begin{frame}
+
 \frametitle{Create Repositories}
 
-\$ \textcolor{blue}{git init} project-name\\
+\$ \textcolor{blue}{git init} \textit{project-name}\\
 Creates a new local repository with the specified name
 
-\$ \textcolor{blue}{git clone} url\\
+\$ \textcolor{blue}{git clone} \textit{url}\\
 Downloads a project and its entire version history but only the master branch!
 
-\$ \textcolor{blue}{git fetch} remote-branch/local-branch\\
+\$ \textcolor{blue}{git fetch} \textit{remote-branch}/\textit{local-branch}\\
 lets you fetch the remote branch and create a local branch
 
-\$ \textcolor{blue}{git checkout} local-branch\\
+\$ \textcolor{blue}{git checkout} \textit{local-branch}\\
 switch to the branch\\
 
 \end{frame}
 
+\section{Make Changes}
 \begin{frame}
   
 \frametitle{Make Changes}
 
-\$ \textcolor{blue}{git status} project-name\\
+\$ \textcolor{blue}{git status}\\
 Most important command! Lists all new or modified files to be committed
 
-\$ \textcolor{blue}{git add} file\\
+\$ \textcolor{blue}{git add} \textit{file}\\
 Snapshots the file in preparation for versioning
 
-\$ \textcolor{blue}{git commit -m} "descriptive message"\\
+\$ \textcolor{blue}{git commit -m} "\textit{descriptive message}"\\
 Records file snapshots permanently in version history
 
-\$ \textcolor{blue}{git commit -am} "descriptive message"\\
+\$ \textcolor{blue}{git commit -am} "\textit{descriptive message}"\\
 Snapshots all tracked files in preparation for versioning \& records file snapshots permanently in version history
 
 \end{frame}
 
+\section{Group Changes}
 \begin{frame}
 
 \frametitle{Group Changes}
@@ -84,20 +86,21 @@ Snapshots all tracked files in preparation for versioning \& records file snapsh
 \$ \textcolor{blue}{git branch}\\
 Lists all local branches in the current repository
 
-\$ \textcolor{blue}{git branch} branch-name\\
+\$ \textcolor{blue}{git branch} \textit{branch-name}\\
 Creates a new branch with the specified branch name
 
-\$ \textcolor{blue}{git checkout} branch-name\\
+\$ \textcolor{blue}{git checkout} \textit{branch-name}\\
 Switches to the specified branch and updates the working directory
 
-\$ \textcolor{blue}{git merge} branch-name\\
+\$ \textcolor{blue}{git merge} \textit{branch-name}\\
 Combines the specified branch's history into the current branch
 
-\$ \textcolor{blue}{git branch -d} branch-name\\
+\$ \textcolor{blue}{git branch -d} \textit{branch-name}\\
 Deletes the specified branch
 
 \end{frame}
 
+\section{Suppress Tracking}
 \begin{frame}
 
 \frametitle{Suppress Tracking}
@@ -105,6 +108,7 @@ Deletes the specified branch
 By creating a file called \textcolor{blue}{.gitignore} (yes its a hidden file) in the root directory, you can specify all the files you want git to ignore.
 
 Examples for files you don't want to track:
+
 \begin{itemize}
 
 \item *.log
@@ -114,14 +118,65 @@ Examples for files you don't want to track:
 
 \end{itemize}
 
+\end{frame}
+
+\section{Save Fragments}
 \begin{frame}
 
 \frametitle{Save Fragments}
 
+\$ \textcolor{blue}{git stash}\\
+Temporarily stores all modified tracked files
 
+\$ \textcolor{blue}{git stash pop}\\
+Restores the most recently stashed files
 
 \end{frame}
 
+\section{Synchronize Changes}
+\begin{frame}
+
+\frametitle{Synchronize Changes}
+
+\$ \textcolor{blue}{git pull}\\
+Downloads bookmark history and incorporates changes
+
+\$ \textcolor{blue}{git push}\\
+Uploads all local branch commits
+
+\$ \textcolor{blue}{git merge} \textit{branch}\\
+Merges the specified branch changes into the the branch you're currently in
+
+\end{frame}
+
+\section{The five daily commands}
+\begin{frame}
+
+\frametitle{The five daily commands}
+
+\begin{itemize}
+\item \$ \textcolor{blue}{git status}\\
+\item \$ \textcolor{blue}{git pull}\\
+\item \$ \textcolor{blue}{git add} \textit{file}\\
+\item \$ \textcolor{blue}{git commit -m} "\textit{descriptive message}"\\
+\item \$ \textcolor{blue}{git push}\\
+\end{itemize}
+
+And please don't use \textcolor{blue}{git commit -am} "\textit{message}"!
+
+\end{frame}
+
+\section{miscellaneous}
+\begin{frame}
+
+\frametitle{miscellaneous}
+
+\item \$ \textcolor{blue}{git checkout} \textit{hash}\\
+Use this only to look up the current state of the commit.
+
+git checkout -b old-state 0d1d7fc32
+
+\end{frame}
 
 % etc
 \end{document}
