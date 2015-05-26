@@ -8,8 +8,14 @@
 
 \definecolor{blue}{HTML}{196284}
 
-\setbeamercolor{title}{fg=blue}
-\setbeamercolor{titlelike}{fg=blue}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{titlelike}{fg=white}
+\setbeamercolor{structure}{bg=blue}
+
+\hypersetup{
+colorlinks=true,
+linkcolor=blue
+}
 
 % Makes more space between new lines
 \setlength{\parskip}{10pt plus 1pt minus 1pt}
@@ -37,7 +43,7 @@
 
 \begin{frame}
 \frametitle{Table of Contents}
-\tableofcontents[currentsection]
+\tableofcontents
 \end{frame}
 
 \section{Create Repositories}
@@ -48,14 +54,15 @@
 \$ \textcolor{blue}{git init} \textit{project-name}\\
 Creates a new local repository with the specified name
 
+\pause
+
 \$ \textcolor{blue}{git clone} \textit{url}\\
 Downloads a project and its entire version history but only the master branch!
 
+\pause
+
 \$ \textcolor{blue}{git fetch} \textit{remote-branch}/\textit{local-branch}\\
 lets you fetch the remote branch and create a local branch
-
-\$ \textcolor{blue}{git checkout} \textit{local-branch}\\
-switch to the branch\\
 
 \end{frame}
 
@@ -67,11 +74,17 @@ switch to the branch\\
 \$ \textcolor{blue}{git status}\\
 Most important command! Lists all new or modified files to be committed
 
+\pause
+
 \$ \textcolor{blue}{git add} \textit{file}\\
 Snapshots the file in preparation for versioning
 
+\pause
+
 \$ \textcolor{blue}{git commit -m} "\textit{descriptive message}"\\
 Records file snapshots permanently in version history
+
+\pause
 
 \$ \textcolor{blue}{git commit -am} "\textit{descriptive message}"\\
 Snapshots all tracked files in preparation for versioning \& records file snapshots permanently in version history
@@ -86,14 +99,22 @@ Snapshots all tracked files in preparation for versioning \& records file snapsh
 \$ \textcolor{blue}{git branch}\\
 Lists all local branches in the current repository
 
+\pause
+
 \$ \textcolor{blue}{git branch} \textit{branch-name}\\
 Creates a new branch with the specified branch name
+
+\pause
 
 \$ \textcolor{blue}{git checkout} \textit{branch-name}\\
 Switches to the specified branch and updates the working directory
 
+\pause
+
 \$ \textcolor{blue}{git merge} \textit{branch-name}\\
 Combines the specified branch's history into the current branch
+
+\pause
 
 \$ \textcolor{blue}{git branch -d} \textit{branch-name}\\
 Deletes the specified branch
@@ -106,6 +127,8 @@ Deletes the specified branch
 \frametitle{Suppress Tracking}
 
 By creating a file called \textcolor{blue}{.gitignore} (yes its a hidden file) in the root directory, you can specify all the files you want git to ignore.
+
+\pause
 
 Examples for files you don't want to track:
 
@@ -128,6 +151,8 @@ Examples for files you don't want to track:
 \$ \textcolor{blue}{git stash}\\
 Temporarily stores all modified tracked files
 
+\pause
+
 \$ \textcolor{blue}{git stash pop}\\
 Restores the most recently stashed files
 
@@ -139,10 +164,15 @@ Restores the most recently stashed files
 \frametitle{Synchronize Changes}
 
 \$ \textcolor{blue}{git pull}\\
-Downloads bookmark history and incorporates changes
+Downloads bookmark history and incorporates changes\\
+Shortcut for: \textcolor{blue}{git fetch} and \textcolor{blue}{git merge}
+
+\pause
 
 \$ \textcolor{blue}{git push}\\
 Uploads all local branch commits
+
+\pause
 
 \$ \textcolor{blue}{git merge} \textit{branch}\\
 Merges the specified branch changes into the the branch you're currently in
@@ -162,19 +192,33 @@ Merges the specified branch changes into the the branch you're currently in
 \item \$ \textcolor{blue}{git push}\\
 \end{itemize}
 
-And please don't use \textcolor{blue}{git commit -am} "\textit{message}"!
+And please DON'T use \textcolor{blue}{git commit -am} "\textit{message}"!
 
 \end{frame}
 
-\section{miscellaneous}
+\section{Miscellaneous}
 \begin{frame}
 
-\frametitle{miscellaneous}
+\frametitle{Miscellaneous}
 
-\item \$ \textcolor{blue}{git checkout} \textit{hash}\\
-Use this only to look up the current state of the commit.
+\$ \textcolor{blue}{git checkout} \textit{hash}\\
+Use this command only to look up the state of the commit.
 
-git checkout -b old-state 0d1d7fc32
+\$ \textcolor{blue}{git revert} \textit{hash}\\
+Use this command to revert to the hash. This implicitly creates a new commit with the state of hash you reverting to and does not change your history!
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Thank You}
+
+\begin{center}
+Now you've learned yourself some GIT!\\
+Thank You!
+
+Questions?
+\end{center}
 
 \end{frame}
 
