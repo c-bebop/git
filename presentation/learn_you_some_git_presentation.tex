@@ -1,0 +1,127 @@
+\documentclass[aspectratio=169]{beamer}
+
+% This document was written with the help of
+% http://en.wikibooks.org/wiki/LaTeX/Presentations
+
+% The theme of this presentation
+\usetheme{default}
+
+\definecolor{blue}{HTML}{196284}
+
+\setbeamercolor{title}{fg=blue}
+\setbeamercolor{titlelike}{fg=blue}
+
+% Makes more space between new lines
+\setlength{\parskip}{10pt plus 1pt minus 1pt}
+
+% Open Sans Package
+\usepackage[default,scale=0.95]{opensans}
+\usepackage[T1]{fontenc}
+
+
+
+% Title page
+\title[Learn You some GIT] % (optional, only for long titles)
+{Learn You some GIT}
+\author[Florian Willich]{Florian Willich}
+\institute[BIT]
+{
+  Quality and Usability Lab\\
+  Berlin Institute of Technology
+}
+\date{\today}
+
+\subject{Computer Science}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents[currentsection]
+\end{frame}
+
+\begin{frame}
+\frametitle{Create Repositories}
+
+\$ \textcolor{blue}{git init} project-name\\
+Creates a new local repository with the specified name
+
+\$ \textcolor{blue}{git clone} url\\
+Downloads a project and its entire version history but only the master branch!
+
+\$ \textcolor{blue}{git fetch} remote-branch/local-branch\\
+lets you fetch the remote branch and create a local branch
+
+\$ \textcolor{blue}{git checkout} local-branch\\
+switch to the branch\\
+
+\end{frame}
+
+\begin{frame}
+  
+\frametitle{Make Changes}
+
+\$ \textcolor{blue}{git status} project-name\\
+Most important command! Lists all new or modified files to be committed
+
+\$ \textcolor{blue}{git add} file\\
+Snapshots the file in preparation for versioning
+
+\$ \textcolor{blue}{git commit -m} "descriptive message"\\
+Records file snapshots permanently in version history
+
+\$ \textcolor{blue}{git commit -am} "descriptive message"\\
+Snapshots all tracked files in preparation for versioning \& records file snapshots permanently in version history
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Group Changes}
+
+\$ \textcolor{blue}{git branch}\\
+Lists all local branches in the current repository
+
+\$ \textcolor{blue}{git branch} branch-name\\
+Creates a new branch with the specified branch name
+
+\$ \textcolor{blue}{git checkout} branch-name\\
+Switches to the specified branch and updates the working directory
+
+\$ \textcolor{blue}{git merge} branch-name\\
+Combines the specified branch's history into the current branch
+
+\$ \textcolor{blue}{git branch -d} branch-name\\
+Deletes the specified branch
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{Suppress Tracking}
+
+By creating a file called \textcolor{blue}{.gitignore} (yes its a hidden file) in the root directory, you can specify all the files you want git to ignore.
+
+Examples for files you don't want to track:
+\begin{itemize}
+
+\item *.log
+\item *.config
+\item my-secret-passwords.secret
+\item Any IDE related files
+
+\end{itemize}
+
+\begin{frame}
+
+\frametitle{Save Fragments}
+
+
+
+\end{frame}
+
+
+% etc
+\end{document}
