@@ -15,6 +15,11 @@
 \setbeamercolor{titlelike}{fg=white}
 \setbeamercolor{structure}{bg=blue}
 
+
+\setbeamertemplate{footline}{%
+    \raisebox{5pt}{\makebox[\paperwidth]{\makebox[20pt]{\color{gray}
+          \scriptsize\insertframenumber}}}\hspace*{5pt}}
+
 \hypersetup{
 colorlinks=true,
 linkcolor=blue
@@ -47,15 +52,16 @@ linkcolor=blue
 \tableofcontents
 \end{frame}
 
-\section{GIT - What's it for?}
+\section{What is it git for?}
 \begin{frame}
 
-\frametitle{GIT - What's it for?}
+\frametitle{What is it git for?}
 
 \begin{center}
 \includegraphics*[scale=0.5]{images/Git-logo.png}
 
-This talk is on Github: \hyperlink{https://github.com/c-bebop/git}{https://github.com/c-bebop/git}
+This talk is on Github: \hyperlink{https://github.com/c-bebop/git}{https://github.com/c-bebop/git}\\
+Based on the Github Cheat Sheet.
 \end{center}
 
 \end{frame}
@@ -140,7 +146,7 @@ Deletes the specified branch
 
 \frametitle{Suppress Tracking}
 
-By creating a file called \textcolor{blue}{.gitignore} (yes its a hidden file) in the root directory, you can specify all the files you want git to ignore.
+By creating a file called \textcolor{blue}{.gitignore} (yes it's a hidden file) in the root directory, you can specify all the files you want git to ignore.
 
 \pause
 
