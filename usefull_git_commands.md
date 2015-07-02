@@ -5,7 +5,7 @@ To set your GIT language to (for example) english, you have to put the following
 ## Branch Managing
 
 ### Deleting a branch local and remote
-First delte it local:
+First delete th branch locally:
 ```git branch -d branch_to_delete```
 Afterwards push changes to origin:
 ```git push origin :branch_to_delete```
