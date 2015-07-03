@@ -16,3 +16,4 @@ If the repository moved to another location (URL):
 ```bash
 git config remote.origin.url git@bitbucket.org:username/website.git
 ```
+Found at: http://stackoverflow.com/questions/14465326/how-do-i-fix-the-path-of-my-local-git-repo-after-move
