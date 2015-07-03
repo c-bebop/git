@@ -9,3 +9,10 @@ First delte it local:
 ```git branch -d branch_to_delete```
 Afterwards push changes to origin:
 ```git push origin :branch_to_delete```
+
+## Miscellaneous
+
+If the repository moved to another location (URL):
+```bash
+git config remote.origin.url git@bitbucket.org:username/website.git
+```
