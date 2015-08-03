@@ -1,3 +1,21 @@
+## Undo Changes 
+
+### Unadded changes
+
+If you've made unintendet changes and you did not add them for the next commit, you can do the following:
+
+```bash
+git checkout <file>
+``` 
+
+### Already commited changes
+
+There is no 'good' way to undo changes that have already been commited due to the fact that by undoing commits we would change the history of the repository (and changing history is never a good idea). What can be done is to revert the commit which initialises a new commit with all the reverted changes:
+
+```bash
+git revert <commit_hash>
+```
+
 ## Language Settings
 To set your GIT language to (for example) english, you have to put the following line into your .bashrc file and remember to tell your shell updating its source via ```source ~./bashrc```:
 ```alias git='LANG=en_GB git'```
