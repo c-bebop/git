@@ -16,6 +16,8 @@ There is no 'good' way to undo changes that have already been commited due to th
 git revert <commit_hash>
 ```
 
+There is a good article about this topic: http://christoph.ruegg.name/blog/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html
+
 ## Language Settings
 To set your GIT language to (for example) english, you have to put the following line into your .bashrc file and remember to tell your shell updating its source via ```source ~./bashrc```:
 ```alias git='LANG=en_GB git'```
