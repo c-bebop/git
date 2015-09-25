@@ -30,6 +30,15 @@ First delete th branch locally:
 Afterwards push changes to origin:
 ```git push origin :branch_to_delete```
 
+### Synchronize remote branch
+
+To synchronize with a remote branch do the following:
+
+```bash
+git fetch origin
+git checkout --track origin/<remote_branch_name>
+```
+
 ## Miscellaneous
 
 If the repository moved to another location (URL):
